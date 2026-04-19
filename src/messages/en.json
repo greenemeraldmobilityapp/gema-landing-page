@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "features": "Features",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Innovative Startup",
+    "title": "Turn Your Business Ideas Into Reality",
+    "subtitle": "We help you build and grow your digital business with innovative solutions and proven effective strategies.",
+    "cta": "Contact via WhatsApp",
+    "secondary": "Learn More"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Building the Digital Future Together",
+    "description": "GEMA is a startup dedicated to helping businesses thrive in the digital age. With a professional and experienced team, we provide innovative technology solutions tailored to client needs.",
+    "stat1": { "value": "100+", "label": "Happy Clients" },
+    "stat2": { "value": "50+", "label": "Projects Completed" },
+    "stat3": { "value": "5+", "label": "Years Experience" },
+    "stat4": { "value": "24/7", "label": "Support" }
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Trusted Digital Solutions for Your Business",
+    "subtitle": "We provide various services to help your business grow in the digital world",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Building modern and responsive websites with the latest technology to enhance your business online presence."
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "Developing user-friendly iOS and Android mobile applications to expand your business reach."
+      },
+      {
+        "title": "Digital Strategy",
+        "description": "Designing effective digital marketing strategies to increase brand awareness and sales conversions."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Creating exceptional user experiences with intuitive and attractive interface designs."
+      }
+    ]
+  },
+  "features": {
+    "badge": "Our Advantages",
+    "title": "Why Choose GEMA?",
+    "subtitle": "We prioritize quality and client satisfaction in every project we work on",
+    "items": [
+      {
+        "title": "Professional Team",
+        "description": "Our team consists of experienced professionals who are passionate about technology and innovation."
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Every solution we provide is specially designed to meet your unique business needs."
+      },
+      {
+        "title": "Competitive Pricing",
+        "description": "We offer competitive pricing without compromising the quality of our work."
+      },
+      {
+        "title": "Fast Support",
+        "description": "Our support team is ready to help you 24/7 to ensure your business runs smoothly."
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Clients Say",
+    "subtitle": "Client trust is our top priority",
+    "items": [
+      {
+        "name": "Budi Santoso",
+        "role": "CEO, Tech Indonesia",
+        "content": "GEMA has helped us significantly improve our company's digital presence. Professional and responsive!"
+      },
+      {
+        "name": "Sarah Wijaya",
+        "role": "Founder, StartupHub",
+        "content": "The solutions provided are very innovative and fit our business needs. Highly recommended!"
+      },
+      {
+        "name": "Ahmad Rizki",
+        "role": "Director, Digital Corp",
+        "content": "A very competent team and satisfying work results. Will continue to collaborate with GEMA."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Get Started",
+    "title": "Ready to Grow Your Business?",
+    "subtitle": "Contact us now and realize your digital business vision with GEMA",
+    "button": "Contact via WhatsApp"
+  },
+  "footer": {
+    "tagline": "Building the digital future together",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "copyright": "All rights reserved. GEMA 2024."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "features": "Features",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Startup Inovatif",
+    "title": "Wujudkan Ide Bisnis Anda Menjadi Kenyataan",
+    "subtitle": "Kami membantu Anda membangun dan mengembangkan bisnis digital dengan solusi inovatif dan strategi yang terbukti efektif.",
+    "cta": "Hubungi via WhatsApp",
+    "secondary": "Pelajari Lebih Lanjut"
+  },
+  "about": {
+    "badge": "Tentang Kami",
+    "title": "Membangun Masa Depan Digital Bersama",
+    "description": "GEMA adalah startup yang berdedikasi untuk membantu bisnis berkembang di era digital. Dengan tim profesional dan berpengalaman, kami menyediakan solusi teknologi yang inovatif dan disesuaikan dengan kebutuhan klien.",
+    "stat1": { "value": "100+", "label": "Klien Puas" },
+    "stat2": { "value": "50+", "label": "Proyek Selesai" },
+    "stat3": { "value": "5+", "label": "Tahun Pengalaman" },
+    "stat4": { "value": "24/7", "label": "Dukungan" }
+  },
+  "services": {
+    "badge": "Layanan Kami",
+    "title": "Solusi Digital Terpercaya untuk Bisnis Anda",
+    "subtitle": "Kami menyediakan berbagai layanan untuk membantu bisnis Anda berkembang di dunia digital",
+    "items": [
+      {
+        "title": "Pengembangan Web",
+        "description": "Membangun website modern dan responsif dengan teknologi terbaru untuk meningkatkan kehadiran online bisnis Anda."
+      },
+      {
+        "title": "Aplikasi Mobile",
+        "description": "Mengembangkan aplikasi mobile iOS dan Android yang user-friendly untuk memperluas jangkauan bisnis Anda."
+      },
+      {
+        "title": "Strategi Digital",
+        "description": "Merancang strategi digital marketing yang efektif untuk meningkatkan brand awareness dan konversi penjualan."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Menciptakan pengalaman pengguna yang luar biasa dengan desain antarmuka yang intuitif dan menarik."
+      }
+    ]
+  },
+  "features": {
+    "badge": "Keunggulan Kami",
+    "title": "Mengapa Memilih GEMA?",
+    "subtitle": "Kami mengutamakan kualitas dan kepuasan klien dalam setiap proyek yang kami kerjakan",
+    "items": [
+      {
+        "title": "Tim Profesional",
+        "description": "Tim kami terdiri dari profesional berpengalaman yang passionate dalam teknologi dan inovasi."
+      },
+      {
+        "title": "Solusi Kustom",
+        "description": "Setiap solusi kami dirancang khusus untuk memenuhi kebutuhan unik bisnis Anda."
+      },
+      {
+        "title": "Harga Kompetitif",
+        "description": "Kami menawarkan harga yang kompetitif tanpa mengorbankan kualitas pekerjaan."
+      },
+      {
+        "title": "Dukungan Cepat",
+        "description": "Tim support kami siap membantu Anda 24/7 untuk memastikan kelancaran bisnis Anda."
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimoni",
+    "title": "Apa Kata Klien Kami",
+    "subtitle": "Kepercayaan klien adalah prioritas utama kami",
+    "items": [
+      {
+        "name": "Budi Santoso",
+        "role": "CEO, Tech Indonesia",
+        "content": "GEMA telah membantu kami meningkatkan presence digital perusahaan secara signifikan. Profesional dan responsif!"
+      },
+      {
+        "name": "Sarah Wijaya",
+        "role": "Founder, StartupHub",
+        "content": "Solusi yang diberikan sangat inovatif dan sesuai dengan kebutuhan bisnis kami. Highly recommended!"
+      },
+      {
+        "name": "Ahmad Rizki",
+        "role": "Director, Digital Corp",
+        "content": "Tim yang sangat kompeten dan hasil kerja yang memuaskan. Akan terus bercollaborasi dengan GEMA."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Mulai Sekarang",
+    "title": "Siap Mengembangkan Bisnis Anda?",
+    "subtitle": "Hubungi kami sekarang dan wujudkan visi bisnis digital Anda bersama GEMA",
+    "button": "Hubungi via WhatsApp"
+  },
+  "footer": {
+    "tagline": "Membangun masa depan digital bersama",
+    "quickLinks": "Tautan Cepat",
+    "services": "Layanan",
+    "contact": "Kontak",
+    "copyright": "Hak cipta dilindungi. GEMA 2024."
+  }
+}
