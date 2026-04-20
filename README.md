@@ -98,25 +98,27 @@ Project ini siap di-deploy ke Vercel:
 
 ## Catatan Issue: Dark/Light Mode Toggle
 
-### Status: ❌ BELUM BERFUNGSI DENGAN KONSISTEN
+### Status: ✅ FIXED - Menggunakan next-themes
 
-### Masalah
-- Saat klik icon theme toggle di navbar, tema tidak berubah secara visual
-- Ada masalah hydration mismatch antara server dan client
-- Theme state tidak konsisten saat berganti halaman
+### Solusi Akhir
+Menggunakan library `next-themes` yang sudah teruji untuk menangani dark/light mode di Next.js:
 
-### Penyebab Root
-1. React SSR menghasilkan HTML berbeda dengan client-side render
-2. next-intl dengan App Router menyebabkan kompleksitas pada theme handling
-3. Tailwind CSS v4 dengan class-based dark mode memerlukan konfigurasi khusus
-4. useState dalam useEffect memerlukan pendekatan berbeda
+```bash
+npm install next-themes
+```
 
-### Solusi yang sudah dicoba
-1. ThemeContext dengan useState/useEffect - GAGAL
-2. useLayoutEffect untuk inisialisasi theme - GAGAL
-3. Mounted state untuk hydration - GAGAL
-4. Standalone ThemeToggle component - GAGAL
-5. Direct DOM manipulation - GAGAL
+**Konfigurasi:**
+- `ThemeProvider` di layout dengan attribute="class"
+- Default theme: dark
+- `useTheme()` hook di ThemeToggle component
+- Mounted state untuk avoid hydration mismatch
+
+### Riwayat Perbaikan
+1. ❌ ThemeContext dengan useState/useEffect
+2. ❌ useLayoutEffect untuk inisialisasi theme
+3. ❌ Mounted state untuk hydration
+4. ❌ Standalone ThemeToggle component (manual DOM)
+5. ✅ **next-themes library** - BERHASIL!
 6. eslint-disable untuk setState dalam effect - BERHASIL (build passed)
 
 ### Perlu Investigasi Lebih Lanjut
