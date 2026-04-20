@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { useTheme } from "@/lib/ThemeContext";
 import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,6 +15,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const locale = useLocale();
+  const router = useRouter();
   const t = useTranslations("navbar");
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Navbar() {
 
   const toggleLanguage = () => {
     const newLocale = locale === "id" ? "en" : "id";
-    window.location.href = `/${newLocale}`;
+    router.push(`/${newLocale}`);
   };
 
   return (
