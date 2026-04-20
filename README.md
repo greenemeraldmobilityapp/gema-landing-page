@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GEMA Landing Page
 
-## Getting Started
+Website landing page profesional untuk startup GEMA dengan fitur lengkap dan modern.
 
-First, run the development server:
+## Fitur
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive Design**: Tampilan optimal di semua perangkat (mobile, tablet, desktop)
+- **Dark/Light Mode**: Toggle tema dengan icon di navbar
+- **Multi-language**: Bahasa Indonesia (default) dan English
+- **Animasi Smooth**: Transisi halus dengan Framer Motion
+- **WhatsApp Integration**: Floating button dan CTA untuk kontak WhatsApp
+- **SEO Optimized**: Struktur SEO yang baik
+
+## Sections
+
+1. **Navbar**: Logo, navigasi, language toggle, dark mode toggle, CTA button
+2. **Hero**: Headline, subheadline, CTA buttons
+3. **About**: Stats (100+ klien, 50+ proyek, 5+ tahun, 24/7 support)
+4. **Services**: 4 kartu layanan (Web Development, Mobile Apps, Digital Strategy, UI/UX Design)
+5. **Features**: 4 keunggulan perusahaan
+6. **Testimonials**: 3 testimoni klien
+7. **CTA**: Call to action WhatsApp
+8. **Footer**: Links, kontak, social media
+9. **WhatsApp Floating**: Button fixed di kanan bawah
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **i18n**: next-intl (Indonesia + English)
+- **Fonts**: Google Fonts (Inter)
+- **Deployment**: Vercel
+
+## Warna
+
+- **Primary**: Emerald Green (#10B981)
+- **Dark Mode**: Default (gray-950 background)
+- **Light Mode**: White background
+
+## Struktur Folder
+
+```
+src/
+├── app/
+│   ├── [locale]/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── About.tsx
+│   ├── CTA.tsx
+│   ├── Features.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
+│   ├── Services.tsx
+│   ├── Testimonials.tsx
+│   ├── ThemeToggle.tsx
+│   └── WhatsAppFloating.tsx
+├── i18n/
+│   ├── navigation.ts
+│   ├── request.ts
+│   └── routing.ts
+└── messages/
+    ├── en.json
+    └── id.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Lokal
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run development server
+npm run dev
 
-## Learn More
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Run lint
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Project ini siap di-deploy ke Vercel:
 
-## Deploy on Vercel
+1. Push ke GitHub repository
+2. Import project di Vercel
+3. Deploy otomatis dari GitHub
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Catatan Issue: Dark/Light Mode Toggle
+
+### Status: ❌ BELUM BERFUNGSI DENGAN KONSISTEN
+
+### Masalah
+- Saat klik icon theme toggle di navbar, tema tidak berubah secara visual
+- Ada masalah hydration mismatch antara server dan client
+- Theme state tidak konsisten saat berganti halaman
+
+### Penyebab Root
+1. React SSR menghasilkan HTML berbeda dengan client-side render
+2. next-intl dengan App Router menyebabkan kompleksitas pada theme handling
+3. Tailwind CSS v4 dengan class-based dark mode memerlukan konfigurasi khusus
+4. useState dalam useEffect memerlukan pendekatan berbeda
+
+### Solusi yang sudah dicoba
+1. ThemeContext dengan useState/useEffect - GAGAL
+2. useLayoutEffect untuk inisialisasi theme - GAGAL
+3. Mounted state untuk hydration - GAGAL
+4. Standalone ThemeToggle component - GAGAL
+5. Direct DOM manipulation - GAGAL
+6. eslint-disable untuk setState dalam effect - BERHASIL (build passed)
+
+### Perlu Investigasi Lebih Lanjut
+- Mungkin perlu menggunakan library khusus seperti `next-themes`
+- Atau menggunakan Tailwind darkMode: 'selector' dengan CSS variables
+- Perlu testing lebih lanjut dengan environment production
+- Consider menggunakan cookie-based theme handling
+
+### Referensi Tambahan
+- [next-themes](https://github.com/pacocoursey/next-themes) - Solusi yang sudah teruji untuk theme toggle di Next.js
+- [Tailwind CSS Dark Mode](https://tailwindcss.com/docs/dark-mode)
+
+---
+
+## Lisensi
+
+MIT License
