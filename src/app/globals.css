@@ -17,14 +17,15 @@
   --font-sans: var(--font-inter);
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+:root,
 html.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+}
+
+html.light {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 body {
@@ -39,10 +40,10 @@ html {
 
 @layer base {
   * {
-    @apply border-gray-200;
+    @apply border-gray-800;
   }
   
-  html.dark * {
-    @apply border-gray-800;
+  html.light * {
+    @apply border-gray-200;
   }
 }
