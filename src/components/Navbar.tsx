@@ -2,18 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
-import { useTheme } from "@/lib/ThemeContext";
 import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 const WhatsAppLink = "https://wa.me/6281250070876";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const locale = useLocale();
   const router = useRouter();
   const t = useTranslations("navbar");
@@ -83,17 +82,7 @@ export default function Navbar() {
               <span className="sr-only">EN/ID</span>
             </button>
 
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="w-5 h-5 text-gray-200" />
-              ) : (
-                <Moon className="w-5 h-5 text-gray-700" />
-              )}
-            </button>
+            <ThemeToggle />
 
             <a
               href={WhatsAppLink}

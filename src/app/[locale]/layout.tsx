@@ -3,7 +3,6 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/lib/ThemeContext";
 import "../globals.css";
 
 const inter = Inter({
@@ -35,9 +34,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
-            {children}
-          </ThemeProvider>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>
