@@ -5,8 +5,6 @@ import { Link } from "@/i18n/navigation";
 import { Mail, Phone, MapPin, Link2, ExternalLink, Globe } from "lucide-react";
 import Image from "next/image";
 
-const WhatsAppLink = "https://wa.me/6281250070876";
-
 export default function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();

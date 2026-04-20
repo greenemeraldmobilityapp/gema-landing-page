@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { useTheme } from "@/lib/ThemeContext";
 import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -16,7 +16,6 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const locale = useLocale();
   const t = useTranslations("navbar");
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
