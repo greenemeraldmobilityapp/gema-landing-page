@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import { createContext, useContext, useEffect, useState, useLayoutEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light";
 
@@ -11,30 +12,26 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+function getStoredTheme(): Theme {
+  if (typeof window === "undefined") return "light";
+  return (localStorage.getItem("theme") as Theme) || 
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
 
-  useLayoutEffect(() => {
-    setMounted(true);
-    const stored = localStorage.getItem("theme") as Theme;
-    if (stored) {
-      setTheme(stored);
-      document.documentElement.classList.add(stored);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.add("light");
-    }
+  useEffect(() => {
+    const stored = getStoredTheme();
+    setTheme(stored);
+    document.documentElement.classList.add(stored);
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
     localStorage.setItem("theme", theme);
-  }, [theme, mounted]);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
